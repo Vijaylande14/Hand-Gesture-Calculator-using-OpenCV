@@ -26,8 +26,11 @@ This project enables users to perform **basic arithmetic operations** (Addition,
  Technology  
 
  **Python** 
+ 
  **OpenCV** 
+ 
  **MediaPipe** 
+ 
 ---
 
 ## 🔧 Installation
