@@ -1,4 +1,4 @@
-# 🖐️ Hand Gesture Arithmetic Calculator (OpenCV + MediaPipe)
+# 🖐️ Hand Gesture Calculator Using (OpenCV + MediaPipe)
 
 This project enables users to perform **basic arithmetic operations** (Addition, Subtraction, Multiplication, Division) using **hand gestures** detected via a webcam. It utilizes **MediaPipe** for real-time hand tracking and **OpenCV** for video processing.
 
