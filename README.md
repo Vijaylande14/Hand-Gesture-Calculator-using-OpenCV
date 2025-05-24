@@ -8,10 +8,10 @@ This project enables users to perform **basic arithmetic operations** (Addition,
 - Real-time hand detection using MediaPipe
 - Finger counting on both hands
 - Supports operations:
-  - ➕ Addition
-  - ➖ Subtraction
-  - ✖️ Multiplication
-  - ➗ Division
+  - **➕ Addition**
+  - **➖ Subtraction**
+  - **✖️ Multiplication**
+  - **➗ Division**
 - Easy mode switching via keyboard:
   - Press `a` for addition
   - Press `s` for subtraction
