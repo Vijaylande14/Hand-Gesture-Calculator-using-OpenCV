@@ -13,11 +13,11 @@ This project enables users to perform **basic arithmetic operations** (Addition,
   - **✖️ Multiplication**
   - **➗ Division**
 - Easy mode switching via keyboard:
-  - Press `a` for addition
-  - Press `s` for subtraction
-  - Press `m` for multiplication
-  - Press `d` for division
-- Press `q` to quit the application
+  - **Press `a` for addition**
+  - **Press `s` for subtraction**
+  - **Press `m` for multiplication**
+  - **Press `d` for division**
+  - **Press `q` to quit the application**
 
 ---
 
