@@ -23,8 +23,6 @@ This project enables users to perform **basic arithmetic operations** (Addition,
 
 ## 🧰 Technologies Used
 
- **Technology**  
-
  **Python** 
  
  **OpenCV** 
