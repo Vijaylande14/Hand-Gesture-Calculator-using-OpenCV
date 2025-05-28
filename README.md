@@ -23,7 +23,7 @@ This project enables users to perform **basic arithmetic operations** (Addition,
 
 ## 🧰 Technologies Used
 
- Technology  
+ **Technology**  
 
  **Python** 
  
