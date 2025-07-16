@@ -33,7 +33,6 @@ This project enables users to perform **basic arithmetic operations** (Addition,
 
 ## 🔧 Installation
 
-
 **📷 Install OpenCV:**
 
 `pip install opencv-python`
