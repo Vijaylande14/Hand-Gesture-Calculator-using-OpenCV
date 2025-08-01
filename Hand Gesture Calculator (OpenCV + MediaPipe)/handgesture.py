@@ -4,13 +4,13 @@ import mediapipe as mp
 # Initialize MediaPipe hands
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.7)
-mp_draw = mp.solutions.drawing_utils
+mp_draw = mp.solutions.drawing_utils  # For drawing hand landmarks
 
 # Finger indices
 finger_tips = [4, 8, 12, 16, 20]
 finger_pips = [2, 6, 10, 14, 18]
 
-# Open webcam
+# Open webcam (0 = default camera)
 cap = cv2.VideoCapture(0)
 
 # Default operation
@@ -22,10 +22,10 @@ while True:
         break
 
     img = cv2.flip(img, 1)
-    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)   # Convert to RGB
     results = hands.process(img_rgb)
 
-    finger_counts = []
+    finger_counts = []    # List to store finger counts for each hand
 
     if results.multi_hand_landmarks and results.multi_handedness:
         for i, hand_landmarks in enumerate(results.multi_hand_landmarks):
@@ -48,7 +48,7 @@ while True:
             finger_counts.append(hand_count)
             mp_draw.draw_landmarks(img, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
-    # Perform selected operation
+   # ----- Perform Arithmetic Operation -----
     if len(finger_counts) == 2:
         a, b = finger_counts
         if current_op == 'a':
@@ -67,18 +67,22 @@ while True:
     else:
         cv2.putText(img, "No hands detected", (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 2)
 
-    # Display current operation
+    # Show result on screen
     op_name = {'a': 'Addition', 's': 'Subtraction', 'm': 'Multiplication', 'd': 'Division'}
     cv2.putText(img, f"Mode: {op_name.get(current_op, 'None')}", (10, 120),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 
+     # Display the image
     cv2.imshow("Finger Math", img)
+
+     # Keyboard controls: change mode or quit
     key = cv2.waitKey(1) & 0xFF
 
     if key == ord('q'):
         break
     elif key in [ord('a'), ord('s'), ord('m'), ord('d')]:
-        current_op = chr(key)
+        current_op = chr(key)  # Change current operation
 
+# Release camera and close windows
 cap.release()
 cv2.destroyAllWindows()
